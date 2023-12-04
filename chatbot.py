@@ -17,7 +17,7 @@ import win32com.client
 
 speaker=win32com.client.Dispatch("SAPI.SpVoice")
 
-folder_path=r"C:\Users\abbya\ZProjects\PDF_Chatbot\pdfs"
+folder_path=r"specify path in your system to store pdfs"
 
 def download_file(url, folder_path,name):
     filename=os.path.basename(url)
@@ -62,12 +62,12 @@ if __name__ == '__main__':
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=20)
     text_chunks = text_splitter.split_documents(data)
 
-    os.environ['GOOGLE_API_KEY'] = 'AIzaSyDQRMbkkdlkjH6Ozy_jRTkrcWI0Zz7QblM'
+    os.environ['GOOGLE_API_KEY'] = 'enter your google api key'
     embeddings = GooglePalmEmbeddings()
     #query_result = embeddings.embed_query("Hello World")
 
 
-    PINECONE_API_KEY = os.environ.get('PINECONE_API_KEY', 'a7781e4d-199a-4156-940e-e884f3b64c07')
+    PINECONE_API_KEY = os.environ.get('PINECONE_API_KEY', 'enter your api key')
     PINECONE_API_ENV = os.environ.get('PINECONE_API_ENV', 'gcp-starter')
 
 
