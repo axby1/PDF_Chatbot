@@ -56,7 +56,7 @@ if __name__ == '__main__':
     name=input("how would like to name the file (eg: filename.pdf)")
     download_file(url, folder_path, name)
 
-    loader = PyPDFDirectoryLoader("pdfs")
+    loader = PyPDFDirectoryLoader("give a folder name to store pdfs")
     data = loader.load()
 
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=20)
